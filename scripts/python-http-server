@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir -p ~/python-http-server
+git clone https://github.com/willbennett95/python-tasks ~/python-http-server
+cd ~/python-http-server
+timeout 300s ./http-server & disown
