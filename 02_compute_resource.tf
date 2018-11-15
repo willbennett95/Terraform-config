@@ -15,7 +15,8 @@ resource "google_compute_instance" "default" {
 		}
 	}
 	metadata {
-		sshKeys = "terraform:${file("~/.ssh/id_rsa.pub")}"
+		sshKeys = 
+			"terraform:${file("~/.ssh/id_rsa.pub")}",
 	}
 	connection = {
 		type = "ssh"
@@ -24,13 +25,15 @@ resource "google_compute_instance" "default" {
 	}
 	provisioner "remote-exec" {
 		inline = [
-			"sudo yum install -y java"
+			"sudo yum install -y java",
+			"sudo yum install -y git"
 		]
 	}
 	provisioner "remote-exec" {
 		scripts = [
 			"scripts/test1",
-			"scripts/test2"
+			"scripts/test2",
+			"scripts/install-jenkins"
 		]
 	}
 }

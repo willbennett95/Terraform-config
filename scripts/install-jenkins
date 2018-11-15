@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mkdir -p ~/jenkins
+git clone https://github.com/willbennett95/centos7-jenkins/ ~/jenkins
+cd ~/jenkins
+chmod +x install-jenkins
+./install-jenkins
