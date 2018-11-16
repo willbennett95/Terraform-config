@@ -1,0 +1,14 @@
+project = "vibrant-climber-188516"
+name = "go-http-server"
+packages = [
+        "make",
+        "git",
+	"go"
+]
+tags = [
+        "http-server"
+]
+scripts = [
+        "scripts/go-http-server"
+]
+allowed_ports = ["22", "9000"]

@@ -19,4 +19,10 @@ python-http-server-apply:
 python-http-server-destroy:
 	@"${TERRAFORM_DESTROY}${VAR_DIR}"/python-http-server.tfvars
 
-.PHONY = terraform-init jenkins-apply jenkins-destroy python-http-server-apply python-http-server-destroy
+go-http-server-apply:
+	@"${TERRAFORM_APPLY}${VAR_DIR}"/go-http-server.tfvars
+
+go-http-server-destroy:
+	@"${TERRAFORM_DESTROY}${VAR_DIR}"/go-http-server.tfvars
+
+.PHONY = terraform-init jenkins-apply jenkins-destroy python-http-server-apply python-http-server-destroy go-http-server-apply go-http-server-destroy

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mkdir -p ~/go-http-server
+git clone https://github.com/willbennett95/go-http-server ~/go-http-server
+cd ~/go-http-server
+go build -o build/go-http-server ./http-server.go
+mv ./static ./build
+./deploy
